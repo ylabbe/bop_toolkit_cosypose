@@ -114,7 +114,7 @@ p['error_type'] = str(args.error_type)
 p['vsd_deltas'] = {str(e.split(':')[0]): float(e.split(':')[1])
                    for e in args.vsd_deltas.split(',')}
 p['vsd_taus'] = list(map(float, args.vsd_taus.split(',')))
-p['vsd_normalized_by_diameter'] = bool(args.vsd_normalized_by_diameter)
+p['vsd_normalized_by_diameter'] = str(args.vsd_normalized_by_diameter) == 'True'
 p['max_sym_disc_step'] = float(args.max_sym_disc_step)
 p['skip_missing'] = bool(args.skip_missing)
 p['renderer_type'] = str(args.renderer_type)
