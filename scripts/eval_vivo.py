@@ -227,26 +227,26 @@ for result_filename in p['result_filenames']:
   misc.log('Evaluation of {} took {}s.'.format(result_filename, time_total))
 
   # Calculate the final scores.
-  final_scores = {}
-  for error in p['errors']:
-    final_scores['bop19_average_recall_{}'.format(error['type'])] =\
-      average_recalls[error['type']]
+  # final_scores = {}
+  # for error in p['errors']:
+  #   final_scores['bop19_average_recall_{}'.format(error['type'])] =\
+  #     average_recalls[error['type']]
 
   # Final score for the given dataset.
-  final_scores['bop19_average_recall'] = np.mean([
-    average_recalls['vsd'], average_recalls['mssd'], average_recalls['mspd']])
+  # final_scores['bop19_average_recall'] = np.mean([
+  #   average_recalls['vsd'], average_recalls['mssd'], average_recalls['mspd']])
 
   # Average estimation time per image.
-  final_scores['bop19_average_time_per_image'] = average_time_per_image
+  # final_scores['bop19_average_time_per_image'] = average_time_per_image
 
   # Save the final scores.
-  final_scores_path = os.path.join(
-    p['eval_path'], result_name, 'scores_bop19.json')
-  inout.save_json(final_scores_path, final_scores)
+  # final_scores_path = os.path.join(
+  #   p['eval_path'], result_name, 'scores_bop19.json')
+  # inout.save_json(final_scores_path, final_scores)
 
-  # Print the final scores.
-  misc.log('FINAL SCORES:')
-  for score_name, score_value in final_scores.items():
-    misc.log('- {}: {}'.format(score_name, score_value))
+  # # Print the final scores.
+  # misc.log('FINAL SCORES:')
+  # for score_name, score_value in final_scores.items():
+  #   misc.log('- {}: {}'.format(score_name, score_value))
 
 misc.log('Done.')
