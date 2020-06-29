@@ -1,18 +1,21 @@
 # Author: Tomas Hodan (hodantom@cmp.felk.cvut.cz)
 # Center for Machine Perception, Czech Technical University in Prague
+import os
+from pathlib import Path
+COSYPOSE_DIR = Path(os.environ['COSYPOSE_DIR'])
 
 """Configuration of the BOP Toolkit."""
 
 ######## Basic ########
 
 # Folder with the BOP datasets.
-datasets_path = r'/gpfsscratch/rech/vuw/uwi72sr/datasets/pose-benchmarks'
+datasets_path = str(COSYPOSE_DIR / 'local_data/bop_datasets')
 
 # Folder with pose results to be evaluated.
-results_path = r'/gpfsscratch/rech/vuw/uwi72sr/datasets/pose-benchmarks/bop_outputs'
+results_path = str(COSYPOSE_DIR / 'local_data/bop_predictions_csv')
 
 # Folder for the calculated pose errors and performance scores.
-eval_path = r'/gpfsscratch/rech/vuw/uwi72sr/datasets/pose-benchmarks/bop_eval'
+eval_path = str(COSYPOSE_DIR / 'local_data/bop_eval_outputs')
 
 ######## Extended ########
 
