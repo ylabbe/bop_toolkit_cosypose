@@ -6,13 +6,13 @@
 ######## Basic ########
 
 # Folder with the BOP datasets.
-datasets_path = r'/path/to/bop/datasets'
+datasets_path = r'/gpfsscratch/rech/vuw/uwi72sr/datasets/pose-benchmarks'
 
 # Folder with pose results to be evaluated.
-results_path = r'/path/to/folder/with/results'
+results_path = r'/gpfsscratch/rech/vuw/uwi72sr/datasets/pose-benchmarks/bop_outputs'
 
 # Folder for the calculated pose errors and performance scores.
-eval_path = r'/path/to/eval/folder'
+eval_path = r'/gpfsscratch/rech/vuw/uwi72sr/datasets/pose-benchmarks/bop_eval'
 
 ######## Extended ########
 
